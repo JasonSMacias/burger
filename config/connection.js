@@ -11,7 +11,7 @@ else{
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "MYSQL_PW",
+    password: process.env.MYSQL_PW,
     database: "burgers_db"
   });
 };
@@ -21,6 +21,6 @@ db.connect(function(err){
     throw err;
   };
   console.log("connected to the db"
-});
+)});
 
 module.exports = db;
