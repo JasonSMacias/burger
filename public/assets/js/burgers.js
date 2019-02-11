@@ -29,15 +29,16 @@ $(document).ready(function(){
   $("#submit-btn").on("click", function(e) {
     e.preventDefault();
 
-    // package up todo
-    const todoItem = {
-      todo: $("#burger-input").val().trim()
-    }
+    // package up burgers
+    const burgerId = {
+      burger_name: $("#burger-input").val().trim()
+    };
+    console.log(burgerId);
 
     $.ajax({
       url: "/api/burgers/",
       method: "POST",
-      data: todoItem // req.body
+      data: burgerId // req.body
     })
     .then(function(data) {
       location.reload();

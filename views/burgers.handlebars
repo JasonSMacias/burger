@@ -15,10 +15,10 @@
       {{#unless eaten}}
         <li class="list-group-item">
           {{burger_name}} 
+          
           <br />
-          <i class="fas fa-hamburger"></i>
-          <button data-id="{{id}}" class="mark-eaten btn btn-info">Eat this burger</button>
-          <button data-id="{{id}}" class="delete btn btn-danger"> Trash this burger </button>
+          <button data-id="{{id}}" class="mark-eaten btn btn-info"><i class="fas fa-hamburger"></i> Eat this burger</button>
+          <button data-id="{{id}}" class="delete btn btn-danger"><i class="fas fa-trash-alt"></i> Trash this burger </button>
         </li>
       {{/unless}}
     {{/each}}
@@ -31,9 +31,9 @@
       {{#if eaten}}
       <li class="list-group-item">
         {{burger_name}}
+        
         <br />
-        <i class="fas fa-toilet"></i>
-        <button data-id="{{id}}" class="delete btn btn-danger"> "Eliminate" this burger </button>
+        <button data-id="{{id}}" class="delete btn btn-danger"><i class="fas fa-toilet"></i> Eliminate this burger </button>
       </li>
       {{/if}}
       {{/each}}
