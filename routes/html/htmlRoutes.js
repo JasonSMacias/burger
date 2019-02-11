@@ -12,7 +12,7 @@ router
         console.log(err);
         return res.status(500).json(err);
       }
-      res.render("burgers", {Burgers: result});
+      res.render("burgers", {burgers: result});
     });
   });
 
